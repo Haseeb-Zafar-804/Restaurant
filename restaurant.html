@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/hijri-date@1.3.3/dist/hijri-date.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-1k7uKScK4xKRYO8n+YjCgbA4DoYzjG4TRC/75YkH7hYCCmAIfBzM2EaN5Dl7kT70mJpG48W5cD/oBJXWn4glA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="style.css">
+
+     <link rel="stylesheet" href="script.js">
+
+    <title>Sizzle & Serve</title>
+
+</head>
+<body>
+        <header>
+            <p>Sizzle & Serve</p>
+            <nav>
+                <ul>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#services" class="nav-link">Service</a></li>
+                </ul>
+            </nav>
+        </header>
+         <!-- Open Cart Button -->
+   <!-- Cart Sidebar -->
+<!-- Cart Sidebar -->
+<div id="cart-sidebar" class="cart-sidebar">
+    <h2>Cart</h2>
+    <ul id="cart-items">
+        <!-- Cart items will be dynamically added here -->
+    </ul>
+    <div class="cart-total">
+        <strong>Total:</strong> Rs <span id="total-amount">0</span>
+    </div>
+    <button id="confirm-order">Confirm Order</button><br>
+    <button id="clear-cart">Clear Cart</button><br> <!-- Add clear cart button -->
+    <button id="close-cart">Close</button><br>
+</div>
+
+<!-- Cart Open Button -->
+<button id="open-cart">View Cart</button>
+
+    <!-- Home Section -->
+    <section class="home-section">
+    <div class="home-content">
+        <h2>Welcome to Sizzle & Serve</h2>  
+       <p>At Sizzle & Serve, we serve fresh, made-to-order fast food that's affordable, delicious, and delivered right to your door. From juicy burgers to crispy fries, every meal is crafted with care and quality ingredients. Join us for a quick, satisfying meal that you'll love!</p>
+    </div>
+    <div class="home-image">
+        <img src="https://static.vecteezy.com/system/resources/previews/037/079/756/original/ai-generated-fast-food-fresh-delicious-burger-high-quality-isolated-transparent-background-png.png" 
+             alt="Burger"
+             title="Try our sizzling hot, freshly prepared burger, made just for you!">
+    </div>
+</section>
+
+<!-- Menu Section -->
+<section id="menu" class="section">
+    <h2>Our Menu</h2>
+    <div class="menu">
+        <div class="menu-item">
+            <img src="https://i.pinimg.com/originals/00/b3/70/00b370466272f2d02566e4fda62aa806.png" 
+                 alt="Macroni" 
+                 title="Delicious Macaroni for only Rs 250!">
+            <div class="menu-info">
+                <h3>Macaroni</h3>
+                <div class="menu-price">Rs 250</div>
+                <button class="order-button">Order Now</a>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="https://static.vecteezy.com/system/resources/previews/035/320/441/original/ai-generated-french-fries-in-a-paper-cup-isolated-on-transparent-background-png.png" 
+                 alt="French Fries" 
+                 title="Crispy French Fries for only Rs 100!">
+            <div class="menu-info">
+                <h3>French Fries</h3>
+                <div class="menu-price">Rs 100</div>
+                <button class="order-button">Order Now</button>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="https://png.pngtree.com/png-vector/20230830/ourmid/pngtree-3d-burger-illustration-png-image_9187823.png" 
+                 alt="Cheese Burger" 
+                 title="Juicy Cheeseburger for only Rs 270!">
+            <div class="menu-info">
+                <h3>Cheeseburger</h3>
+                <div class="menu-price">Rs 270</div>
+                <button class="order-button">Order Now</button>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="https://static.vecteezy.com/system/resources/previews/024/589/160/non_2x/top-view-pizza-with-ai-generated-free-png.png" 
+                 alt="Pizza" 
+                 title="Hot and cheesy pizza for Rs 100!">
+            <div class="menu-info">
+                <h3>Cheesy Pizza</h3>
+                <div class="menu-price">Rs 100</div>
+                <button class="order-button">Order Now</button>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="https://img.pikbest.com/origin/10/48/62/97cpIkbEsTeJr.png!sw800" 
+                 alt="French Fries" 
+                 title="Golden, crispy Fried Chicken 2pcs Plate for Rs 500!">
+            <div class="menu-info">
+                <h3>Fried Chicken</h3>
+                <div class="menu-price">Rs 500</div>
+                <button class="order-button">Order Now</button>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="https://png.pngtree.com/png-vector/20240206/ourmid/pngtree-food-burger-fries-drink-png-image_11668449.png" 
+                 alt="Party Pack" 
+                 title="Our Party Pack burgers, fries 1 Plate, and a Cola next 1L for Rs 499!">
+            <div class="menu-info">
+                <h3>Party Pack</h3>
+                <div class="menu-price">Rs 499</div>
+                <button class="order-button">Order Now</button>
+            </div>
+        </div>
+    </div>
+ <!-- Service Section -->
+ <section class="services" id="services">
+    <h2>Our Services</h2><br><br>
+    <div class="service-container">
+      <div class="service-box">
+        <div class="service-icon">
+          <img src="https://fabulouswisconsin.com/wp-content/uploads/sites/3/2022/12/new-years-eve-dining-360x240.jpg" alt="Dine-In">
+        </div>
+        <h3>Dine-In Experience</h3>
+        <p>Relax and enjoy a delightful dining experience with a cozy atmosphere and delicious meals.</p>
+      </div>
+      <div class="service-box">
+        <div class="service-icon">
+          <img src="https://media.istockphoto.com/id/1370555489/photo/coffeeshop-worker-talking-to-customers.jpg?s=612x612&w=0&k=20&c=jUDhuQLwvKIiZtaq-gfZ18o698cBT_KT6soej1U4eSs=" alt="Takeaway">
+        </div>
+        <h3>Quick Takeaway</h3>
+        <p>Grab your favorite meals on the go with our fast and convenient takeaway service.</p>
+      </div>
+      <div class="service-box">
+        <div class="service-icon">
+          <img src="https://chefsville.org/wp-content/uploads/2016/02/family-having-dinner-at-home-teens-600x399.jpg" alt="Delivery">
+        </div>
+        <h3>Fast Delivery</h3>
+        <p>Enjoy your meals delivered to your door in no time, hot and fresh!</p>
+      </div>
+    </div>
+  </section>
+  
+  
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Us</h2><br><hr><br>
+        <p>Welcome to Fast Food Express, where we’re dedicated to bringing you an unmatched fast food experience. Our mission is simple: to serve delicious, high-quality meals that satisfy your cravings and exceed your expectations. Every item on our menu is carefully crafted by a team of passionate food lovers, committed to delivering exceptional taste and freshness in every bite.
+
+            At Fast Food Express, we believe that great food starts with great ingredients. That’s why we go the extra mile to source the freshest vegetables, premium meats, and the finest seasonings, ensuring that every dish we serve is bursting with flavor. From classic favorites to creative new twists, we offer a wide variety of options to cater to all tastes.
+            
+            Our commitment doesn’t stop at just good food — we pride ourselves on delivering fast, friendly service so that you can enjoy your meal without the wait. Whether you’re dining in, taking out, or ordering online, we make it easy and convenient for you to enjoy your favorite meals anytime, anywhere.
+            
+            At Fast Food Express, we’re more than just a place to eat — we’re a place where food meets passion. Come and experience the perfect blend of speed, flavor, and freshness, all at a price that’s easy on your wallet.".</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2><br><hr><br>
+
+        <p>We’d love to hear from you! Whether you have a question, feedback, or simply want to connect, feel free to reach out. Our team is always here to assist you with any inquiries or concerns.</p>
+        <p>Email: <a href="https://mail.google.com/mail/u/0/#starred?compose=lqrslzJQxQpspTTkrNtZldmgfvxGZFphgzTngSKBmvBMxQRXtlrRSRLnWlzwXHzqGfDlXDkVvTVsSzWrT">our Email Address</a></p>
+        <p>Address: Nazimabad etc City</p>
+        <p>Follow us on social media for the latest updates and promotions!</p>
+        <div class="social-links">
+            <a href="https://facebook.com/yourpage" target="_blank">Facebook</a> |
+            <a href="https://twitter.com/yourpage" target="_blank">YouTube</a> |
+            <a href="https://instagram.com/yourpage" target="_blank">Instagram</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p> Sizzle & Serve- Savor the Flavor, Experience the Moments.”</p>
+    </footer>
+
+</body>
+</html>

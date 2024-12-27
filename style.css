@@ -1,0 +1,703 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: rgb(53, 53, 53);
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 30px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px;
+background-color: #ffffff; /* Add background color */
+box-shadow: 0 4px 10px rgba(102, 102, 102, 0.1);
+}
+header p{
+color: #333333;
+}
+
+.logo {
+width: 50px; /* Adjust the size of the logo */
+height: auto;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #464646;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+}
+.nav{
+    height: 0.5em;
+    box-shadow: 0 4px 10px rgba(87, 87, 87, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+    background-color: #ffffff;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
+    color: rgb(37, 37, 37);
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: #ff5100;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a.active::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #ff5100;
+}
+
+/* Section styling */
+.section {
+    padding: 60px 20px;
+    min-height: 60vh; /* Set minimum height for each section */
+    background-color: #ffffff; /* Optional: background for sections */
+    display: block; /* Ensure sections are displayed */
+}
+.section P{
+    color: #2e2e2e;
+}
+/* Home Section */
+.home-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.home-content h2 {
+    font-size: 2.5em;
+    color: #ff5100;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 2s forwards ease-in-out 0.5s; /* Add fade-in animation */
+}
+
+.home-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #444444;
+    opacity: 0;
+    animation: fadeIn 2s forwards ease-in-out 1s; /* Add fade-in animation with delay */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Image with slide-in and float animation */
+.home-image {
+    flex: 1;
+    max-width: 50%;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(100%); /* Slide-in from right */
+    animation: slideIn 1.5s forwards ease-in-out 1.5s, float 3s ease-in-out infinite; /* Float animation */
+}
+
+.home-image img {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Adjust the float distance */
+    }
+}
+
+/* Menu Section */
+.menu {
+    display: flex;
+    justify-content: space-around; /* Space out menu items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-top: 30px; /* Add margin above the menu */
+}
+ .section p{
+    line-height: 2.2;
+ }
+
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Stack items vertically */
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #b8b8b8;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    width: 30%; /* Adjust width as needed for three items per row */
+    text-align: center; /* Center text */
+}
+
+.menu-item:hover {
+    background-color: rgba(150, 150, 150, 0.133);
+}
+
+.menu-item img {
+    width: 120px; /* Adjust size as needed */
+    height: 120;
+    margin-bottom: 10px; /* Add margin below images */
+    box-shadow: 0 4px 10px rgba(199, 199, 199, 0.1);
+    border-radius: 11px;
+    box-sizing: fit-content;
+}
+
+.menu-info h3 {
+    margin-top: 4px;
+    color: #ff5100;
+    font-display: flex;
+    font-size: 1em;
+    border: 1px solid #fdfdfd;
+    border-radius: 12px;
+    width: 13rem;
+    height: 1.6rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.menu-price {
+font-size: 1.2em;
+color: #4d4d4d;
+margin: 5px 0;
+font-family: "Courgette", cursive; /* If you want a different font, consider changing this */
+font-weight: 400; /* Adjust this value if you want a bolder or lighter font */
+font-style: normal; /* This prevents italics */
+}
+
+p{
+    line-height: 1.6;
+}
+.order-button {
+text-decoration: none; /* Remove underline */
+color: white; /* Set the text color (change as needed) */
+background-color: #ff5722; /* Button background color */
+padding: 5px 10px; /* Reduced padding for smaller button */
+border: none; /* Remove border */
+border-radius: 15px; /* Rounded corners */
+height: 2rem; /* Fixed height for all buttons */
+cursor: pointer; /* Pointer cursor on hover */
+transition: background-color 0.3s; /* Transition effect */
+font-size: 14px; /* Adjust font size as needed */
+width: 9rem; /* Fixed width for uniformity */
+display: inline-block; /* Ensures it respects width settings */
+text-align: center; /* Centers the text within the button */
+}
+
+
+.order-button:hover {
+background-color: #e63819; /* Darker shade on hover */
+}
+
+
+ /* Contact Section */
+ #contact {
+background-color: #ffffff; /* Full background in #111 */
+padding: 20px;
+border-radius: 10px;
+margin: 0; /* Remove auto margin for centering */
+width: 100%; /* Full screen width */
+height: 100vh; /* Full viewport height */
+color: #fff; /* White text for better readability */
+position: relative;
+top: 0;
+left: 0;
+}
+
+
+h2 {
+font-size: 2rem;
+color: #414141; /* White for the title */
+}
+
+#contact hr {
+height: 2px;
+background: #6d6d6d; /* Grey white color for the hr line */
+}
+
+#contact p {
+font-size: 1.1rem;
+color: #414141; /* Light text color for readability */
+margin-bottom: 20px;
+line-height: 1.6;
+}
+
+#contact a {
+color: #ff6347; /* Tomato color for links */
+text-decoration: none;
+font-weight: bold;
+transition: color 0.3s ease;
+}
+
+#contact a:hover {
+color: #9e9e9e; /* Light grey on hover for contrast */
+}
+
+#contact ul {
+list-style: none;
+padding: 0;
+}
+
+#contact ul li {
+display: inline-block;
+margin: 0 10px;
+}
+
+#contact ul li a {
+font-size: 1.2rem;
+padding: 10px;
+border: 2px solid #ff6347;
+border-radius: 50%;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#contact ul li a:hover {
+background-color: #ff6347;
+color: #525252;
+}
+
+/* Ensure the content stays visually centered */
+#contact .content {
+padding-left: 0;
+z-index: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    color: rgb(39, 39, 39);
+    text-align: center;
+    padding: 30px;
+}
+
+footer p {
+    font-size: 1em;
+    color: #333333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .home-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .home-image {
+        max-width: 100%;
+        transform: translateX(0); /* Disable slide-in on smaller screens */
+    }
+
+    .home-image img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .menu-item {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+h2{
+    font-family: "Montserrat", sans-serif;
+     font-weight: 500;;
+}
+header p {
+gap: 1rem;
+font-weight: 500;
+font-family: "Kaushan Script", cursive;
+font-weight: 300;
+font-style: normal;
+font-size: 1.5rem;
+color: #464646; 
+text-align: center;
+margin-left: 1rem
+
+
+}
+/* Cart Sidebar Styles */
+/* Cart Sidebar */
+.cart-sidebar {
+margin-top: 1em;
+position: fixed;
+top: 0;
+right: -300px; /* Hidden by default */
+width: 300px;
+height: 100%; /* Full height */
+background-color: #f9f9f9;
+border: 1px solid rgb(211, 210, 210);
+padding: 20px;
+z-index: 999;
+transition: right 0.3s ease;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+overflow-y: auto; /* Enable scrolling */
+}
+
+.cart-sidebar h2 {
+margin-bottom: 20px;
+text-align: center;
+font-size: 24px;
+color: #333;
+}
+
+#cart-items {
+list-style-type: none;
+padding: 0;
+margin: 0;
+}
+
+#cart-items li {
+margin-bottom: 10px;
+padding: 10px;
+border-bottom: 1px solid #ccc;
+display: flex; /* Flex for icons and text */
+align-items: center; /* Center items vertically */
+}
+
+#cart-items li i {
+margin-right: 10px; /* Space between icon and text */
+color: #007bff; /* Icon color */
+}
+
+.cart-total {
+margin-top: 20px;
+font-size: 18px;
+font-weight: bold;
+}
+/* Confirm Order Button */
+#confirm-order {
+background: linear-gradient(135deg, #28a745, #34d058); /* Gradient background */
+color: white;
+padding: 12px 20px; /* Increased padding for a better look */
+border: none;
+cursor: pointer;
+margin-top: 20px;
+border-radius: 7px; /* Rounded corners */
+transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for animation */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+font-size: 16px; /* Increased font size */
+font-weight: bold; /* Bold text */
+width: 10rem;
+height: 3rem;
+}
+
+#confirm-order:hover {
+background: linear-gradient(135deg, #218838, #28a745); /* Darker gradient on hover */
+transform: translateY(-3px); /* Lift effect */
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Close Cart Button */
+#close-cart {
+background: linear-gradient(135deg, #dc3545, #ff6b6b); /* Gradient background */
+color: white;
+padding: 12px 20px; /* Increased padding */
+border: none;
+cursor: pointer;
+margin-top: 10px;
+border-radius: 7px; /* Rounded corners */
+transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for animation */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+font-size: 16px; /* Increased font size */
+font-weight: bold; /* Bold text */
+width: 10rem;
+}
+
+#close-cart:hover {
+background: linear-gradient(135deg, #c82333, #dc3545); /* Darker gradient on hover */
+transform: translateY(-3px); /* Lift effect */
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+
+#open-cart {
+position: fixed;
+bottom: 20px;
+right: 20px;
+padding: 15px;
+background-color: #ff5722;
+color: white;
+border: none;
+cursor: pointer;
+z-index: 1000;
+border-radius: 25px;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+transition: background-color 0.3s ease;
+}
+
+#open-cart:hover {
+background-color: #fa4008; /* Darker blue on hover */
+}
+
+/* Animation for cart items */
+@keyframes slideIn {
+from {
+transform: translateX(100%);
+opacity: 0;
+}
+to {
+transform: translateX(0);
+opacity: 1;
+}
+}
+
+.cart-item {
+animation: slideIn 0.3s ease forwards; /* Apply slide-in animation */
+}
+/* Clear Cart Button */
+#clear-cart {
+background: linear-gradient(135deg, #0ce2d0, #05a8a1); /* Gradient background */
+color: white;
+padding: 12px 20px; /* Increased padding for a more substantial look */
+border: none;
+cursor: pointer;
+margin-top: 10px;
+border-radius: 7px; /* Rounded corners */
+transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added transition effects */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+font-size: 16px; /* Font size for better readability */
+font-weight: bold; /* Bold text for emphasis */
+font-family: 'Roboto', sans-serif; /* Modern font */
+width: 10rem;
+}
+#clear-cart,#close-cart,#confirm-order {
+margin-left: 1rem;
+width: 15rem;
+justify-content: center;
+}
+#clear-cart:hover {
+background: linear-gradient(135deg, #05a8a1, #0ce2d0); /* Reversed gradient on hover */
+transform: translateY(-3px); /* Lift effect on hover */
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+filter: drop-shadow(0 0 10px rgba(80, 80, 80, 0.7)); /* Aqua glow effect */
+}
+/* Service Section Styling */
+.services {
+padding: 60px 0;
+text-align: center;
+color: #fff;
+}
+
+.services h2 {
+font-size: 2rem; /* Adjusts the font size to 2 rem units */
+position: relative; /* Allows for positioning with respect to the element's normal flow */
+animation: fadeInDown 1s ease-in-out; /* Applies fadeInDown animation with a duration of 1s */
+text-transform: uppercase; /* Makes all text uppercase */
+letter-spacing: 1.8px; /* Adds 1.8px of space between each letter */
+text-align: left; /* Aligns the heading to the left */
+margin-left: 20px; /* Adds 20px of space from the left side */
+margin-top: -15px; /* Adds a negative margin to move the heading upwards by 15px */
+}
+
+/* Service Container */
+.service-container {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+gap: 20px;
+padding: 0 40px;
+}
+
+.service-box {
+background-color: #fff;
+padding: 30px;
+border-radius: 15px;
+box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15); /* Updated box-shadow on all sides */
+width: 30%;
+min-width: 270px;
+transition: transform 0.5s, box-shadow 0.5s;
+position: relative;
+cursor: pointer;
+overflow: hidden;
+}
+
+.service-box:hover {
+transform: translateY(-7px);
+box-shadow: 0 30px 40px rgba(0, 0, 0, 0.25);
+}
+.cart-total{
+margin-top: 1rem;
+font-family: "Montserrat", sans-serif;
+font-weight: 500;
+}
+/* Icon Animation */
+.service-icon {
+width: 100px; /* Size of the service icon container */
+height: 100px; /* Size of the service icon container */
+border-radius: 50%; /* Circular shape */
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 auto 30px; /* Centered with bottom margin */
+position: relative;
+animation: imageBounce 2s infinite; /* Adds up and down bounce effect */
+}
+
+.service-icon img {
+width: 50px; /* Size of the icon image */
+height: 50px; /* Size of the icon image */
+}
+
+.service-box h3 {
+font-size: 24px; /* Font size for the service title */
+color: #e74c3c; /* Color for the service title */
+margin-bottom: 15px; /* Space below the title */
+position: relative;
+animation: fadeInUp 1.2s ease-in-out; /* Fade-in animation */
+}
+
+.service-box p {
+font-size: 16px; /* Font size for the service description */
+color: #555; /* Color for the service description */
+animation: fadeInUp 1.4s ease-in-out; /* Fade-in animation */
+}
+
+/* Added image styling for services */
+.service-box img {
+width: 600px; /* Width of the service box image */
+height: 140px; /* Height of the service box image */
+border-radius: 10px; /* Rounding edges of the service box image */
+margin-bottom: 15px; /* Space below the service box image */
+margin-top: 20px; /* Space above the service box image */
+}
+@keyframes fadeInDown {
+0% {
+opacity: 0;
+transform: translateY(-20px);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes fadeInUp {
+0% {
+opacity: 0;
+transform: translateY(30px);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes iconBounce {
+0%, 100% {
+transform: translateY(0);
+}
+50% {
+transform: translateY(-10px); /* Original iconBounce animation */
+}
+}
+
+/* Image Bounce Animation - moves image 3-4px up and down */
+@keyframes imageBounce {
+0%, 100% {
+transform: translateY(0);
+}
+50% {
+transform: translateY(-4px); /* Moves the image up by 4px */
+}
+}
+.banner {
+background-image: url('https://example.com/your-banner-image.jpg'); /* Replace with your banner image URL */
+background-size: cover;
+background-position: center;
+padding: 100px 20px; /* Add padding for space */
+color: #fff; /* Text color for contrast */
+text-align: center; /* Center the text */
+}
+
+.banner-content h2 {
+font-size: 2.5em; /* Size of the heading */
+margin: 0; /* Remove default margin */
+}
+
+.banner-content p {
+font-size: 1.2em; /* Size of the paragraph text */
+}
+
+/* Styling for the image */
+.banner-image {
+margin-top: -97px; /* Space above the image */
+width: 100%; /* Set the width of the image */
+height: 450px; /* Keep the aspect ratio */
+border-radius: 15px; /* Rounded corners */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
